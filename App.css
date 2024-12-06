@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./background.jpg'); /* Correct path */
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Make sure it's positioned correctly to hold images in corner */
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-container {
+    position: absolute;
+    top: 20px; /* Adjust as per requirement */
+    left: 20px; /* Adjust as per requirement */
+    display: flex;
+    gap: 10px;
+    animation: moveImages 10s infinite linear;
+  }
+  
+  .image-container img {
+    width: 100px; /* Adjust the size of the images */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  @keyframes moveImages {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(300px); /* Change this to adjust how far the images move */
+    }
+  }
+  
+  .corner-video {
+    position: absolute;
+    bottom: 100px;  /* Adjust this value to move the video down further */
+    right: 00px;   /* Keep the right position as is */
+    width: 300px;  /* Set a reasonable width for the video */
+    height: auto;
+    object-fit: cover; /* Ensure the video covers the container */
+    border-radius: 10px;
+    display: block;
+  }
+  
+  
